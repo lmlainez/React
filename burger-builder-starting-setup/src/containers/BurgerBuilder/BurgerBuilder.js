@@ -30,7 +30,15 @@ class BurgerBuilder extends Component{
 		.then((response) => {
 			this.setState({ingredients:response.data})
   		}).catch((error)=>{
-		this.setState({error:true})
+		
+		// this.setState({error:true})
+		//if there is no netwrok, we'll need to set up the igredients by hand, to keep on working.
+			this.setState({ingredients:{
+				salad:2,
+				meat:1,
+				cheese:0,
+				bacon:1
+			}})
 		});
   }
   
