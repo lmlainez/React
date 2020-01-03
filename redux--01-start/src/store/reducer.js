@@ -34,6 +34,14 @@ const reducer = (state = initialState, action) => {
             results: state.results.concat({id:new Date(), value:state.counter}) //Concat Returns a new Array, so it is immutable
         }
     }
+    if (action.type === 'DELETE_RESULT') {
+        //We'll return an array with all elements that are not the one we are passing
+        const updatedArray = state.results.filter( (result,index) => result.id !== action.resultElementId);
+        return {
+            ...state,
+            results: updatedArray
+    }
+    }
     return state;
 };
 
