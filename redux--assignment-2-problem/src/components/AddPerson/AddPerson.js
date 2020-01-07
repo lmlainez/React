@@ -13,6 +13,7 @@ class AddPerson extends Component{
     ageChangeHandler = (event) =>{
         this.setState({age:event.target.value});
     }
+    
     render(){
         return (
             <div className="AddPerson">
