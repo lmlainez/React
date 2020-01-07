@@ -43,7 +43,7 @@ const mapDispatchToProps = dispatch => {
         onStoreResult: (res) => dispatch({type: actionTypes.STORE_RESULT, result:res}),
         onDeleteResult: (elementId) => dispatch({type:actionTypes.DELETE_RESULT,resultElementId:elementId})
     
-};
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
